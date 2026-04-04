@@ -21,9 +21,9 @@
       "description": "Maintenance skill for managing the PM Toolkit plugin itself"
     },
     {
-      "name": "strategy",
-      "source": "./plugins/strategy",
-      "description": "Strategic intelligence skills for competitive analysis, market monitoring, and industry trend tracking"
+      "name": "pm-strategy",
+      "source": "./plugins/pm-strategy",
+      "description": "Strategic intelligence skills for competitive analysis, market monitoring, and industry trend tracking in AI and knowledge management"
     }
   ]
 }
