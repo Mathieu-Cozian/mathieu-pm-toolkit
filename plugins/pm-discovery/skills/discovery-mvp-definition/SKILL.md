@@ -1,3 +1,8 @@
+---
+name: discovery-mvp-definition
+description: Define and prioritize MVP solutions using Opportunity Solution Tree and RICE frameworks during the Execute phase. Trigger when the user says "définis le MVP", "priorise les solutions", "brainstorm solutions", "Execute phase", "fais l'OST", "RICE framework".
+---
+
 # Skill: discovery-mvp-definition
 
 ## Trigger

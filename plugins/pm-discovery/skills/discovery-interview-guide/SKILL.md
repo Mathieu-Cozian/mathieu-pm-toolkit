@@ -1,3 +1,8 @@
+---
+name: discovery-interview-guide
+description: Generate a structured user research interview guide for the Observe phase of a discovery. Trigger when the user says "prépare le guide d'entretien", "génère un interview guide", "j'ai des interviews clients à faire", "prepare my user interview guide", or needs to prepare for user interviews.
+---
+
 # Skill: discovery-interview-guide
 
 ## Trigger

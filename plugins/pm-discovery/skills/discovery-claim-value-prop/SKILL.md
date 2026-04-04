@@ -1,3 +1,8 @@
+---
+name: discovery-claim-value-prop
+description: Define the value proposition with an Amazon-style Press Release and Launch Tweet during the Claim phase. Trigger when the user says "rédige le Claim", "écris le press release", "génère le launch tweet", "définis notre value prop", "write the press release and launch tweet".
+---
+
 # Skill: discovery-claim-value-prop
 
 ## Trigger

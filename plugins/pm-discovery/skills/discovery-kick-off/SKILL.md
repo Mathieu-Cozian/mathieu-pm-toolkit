@@ -1,3 +1,8 @@
+---
+name: discovery-kick-off
+description: Start a new product discovery project with a kick-off document and Project Ambition sheet following the FOCUSED framework (Frame phase). Trigger when the user says "lance le kick off", "démarre une discovery", "prépare le doc de kick off", "create a discovery kick off", or wants to start a new discovery.
+---
+
 # Skill: discovery-kick-off
 
 ## Trigger
