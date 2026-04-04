@@ -1,8 +1,3 @@
----
-name: discovery-user-journey
-description: Map current and future user journeys with key touchpoints during the Unfold phase. Trigger when the user says "mappe le parcours utilisateur", "fais le user journey", "identifie les touchpoints", "Unfold phase", "map the current and future user flow".
----
-
 # Skill: discovery-user-journey
 
 ## Trigger

@@ -1,8 +1,3 @@
----
-name: toolkit-meta
-description: Manage the Mathieu PM Toolkit — list, create, update, or delete skills. Trigger when the user says "mets à jour le skill", "ajoute un nouveau skill", "crée un skill", "supprime le skill", "liste mes skills", "montre-moi mes skills", "gère mon toolkit".
----
-
 # toolkit-meta
 
 ## Description

@@ -1,8 +1,3 @@
----
-name: discovery-first-use-case
-description: Synthesize interview learnings into a First Use Case (FUC) statement during the Observe phase. Trigger when the user says "synthétise mes interviews en FUC", "rédige le premier use case", "j'ai fini mes interviews, aide-moi à synthétiser", "write the first use case from my interviews".
----
-
 # Skill: discovery-first-use-case
 
 ## Trigger

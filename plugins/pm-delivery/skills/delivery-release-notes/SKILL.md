@@ -1,13 +1,3 @@
----
-name: delivery-release-notes
-description: >
-  Generate Mayday product release notes in the exact format used on documentation.mayday.fr.
-  Trigger when the user asks to write, draft, or create a release note, changelog, or "nouveautés"
-  for Mayday. Also trigger when the user mentions "release notes", "notes de version", "nouveautés",
-  or references the Mayday documentation update cycle. The output is a structured French-language
-  document ready to publish on the Mayday help center.
----
-
 # Mayday Release Notes Generator
 
 ## Overview

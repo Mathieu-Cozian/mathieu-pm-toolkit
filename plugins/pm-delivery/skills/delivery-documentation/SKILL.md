@@ -1,8 +1,3 @@
----
-name: delivery-documentation
-description: Create professional French documentation articles for Mayday product features following the company's established style guide. Use this skill when the user needs to write, create, draft, or update documentation for Mayday's help center (documentation.mayday.fr), especially after product releases. Trigger when the user mentions "documentation Mayday", "articles d'aide", "centre d'aide", "help center", "doc produit", or provides a product brief/success toolkit for documentation. Also trigger when the user asks to structure feature documentation into multiple articles or update existing Mayday documentation.
----
-
 # Mayday Documentation Generator
 
 ## Overview

@@ -1,8 +1,3 @@
----
-name: discovery-product-brief
-description: Write a complete PRD / Product Brief at the end of discovery during the Decide phase. Trigger when the user says "écris le PRD", "rédige le product brief", "Decide phase", "write the PRD", or wants to formalize discovery findings into a product requirements document.
----
-
 # Skill: discovery-product-brief
 
 ## Trigger
