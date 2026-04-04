@@ -1,0 +1,9 @@
+{
+  "name": "pm-delivery",
+  "version": "0.1.0",
+  "description": "Product delivery skills for writing specs, documentation, and release notes",
+  "author": {
+    "name": "Mathieu Cozian",
+    "url": "https://github.com/Mathieu-Cozian"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "mathieu-pm-toolkit",
+  "owner": {
+    "name": "Mathieu Cozian",
+    "url": "https://github.com/Mathieu-Cozian"
+  },
+  "plugins": [
+    {
+      "name": "pm-discovery",
+      "source": "./plugins/pm-discovery",
+      "description": "Product discovery skills following the FOCUSED framework (Frame, Observe, Claim, Unfold, Steal, Execute, Decide)"
+    },
+    {
+      "name": "pm-delivery",
+      "source": "./plugins/pm-delivery",
+      "description": "Product delivery skills for specs, documentation, and release notes"
+    },
+    {
+      "name": "pm-toolkit-meta",
+      "source": "./plugins/pm-toolkit-meta",
+      "description": "Maintenance skill for managing the PM Toolkit plugin itself"
+    }
+  ]
+}
