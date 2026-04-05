@@ -1,6 +1,0 @@
-#!/bin/sh
-# Auto-sync Claude marketplace after push
-# Runs in background — transparent, no delay on your push
-(sleep 10 && claude plugin marketplace update) &
-disown
-exit 0
