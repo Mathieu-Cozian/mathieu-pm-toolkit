@@ -52,8 +52,14 @@ jobs:
             new_patch=$((patch + 1))
             new_version="$major.$minor.$new_patch"
 
-            # Write new version
+            # Write new version in plugin.json
             jq --arg v "$new_version" '.version = $v' "$PLUGIN_JSON" > tmp.json && mv tmp.json "$PLUGIN_JSON"
+
+            # Write new version in marketplace.json
+            plugin_name=$(echo "$plugin" | sed 's|plugins/||')
+            jq --arg name "$plugin_name" --arg v "$new_version" \
+              '.plugins = [.plugins[] | if .name == $name then .version = $v else . end]' \
+              .claude-plugin/marketplace.json > tmp.json && mv tmp.json .claude-plugin/marketplace.json
 
             echo "Bumped $plugin: $current → $new_version"
             BUMPED+=("$plugin")
@@ -66,6 +72,7 @@ jobs:
             for p in "${BUMPED[@]}"; do
               git add "$p/.claude-plugin/plugin.json"
             done
+            git add .claude-plugin/marketplace.json
             git commit -m "chore: bump patch version for ${BUMPED[*]}" || echo "Nothing to commit"
             git push
           fi

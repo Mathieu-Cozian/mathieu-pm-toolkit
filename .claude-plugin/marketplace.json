@@ -7,21 +7,25 @@
   "plugins": [
     {
       "name": "pm-discovery",
+      "version": "0.1.6",
       "source": "./plugins/pm-discovery",
       "description": "Product discovery skills following the FOCUSED framework (Frame, Observe, Claim, Unfold, Steal, Execute, Decide)"
     },
     {
       "name": "pm-delivery",
+      "version": "0.1.0",
       "source": "./plugins/pm-delivery",
       "description": "Product delivery skills for specs, documentation, and release notes"
     },
     {
       "name": "pm-toolkit-meta",
+      "version": "0.1.0",
       "source": "./plugins/pm-toolkit-meta",
       "description": "Maintenance skill for managing the PM Toolkit plugin itself"
     },
     {
       "name": "pm-strategy",
+      "version": "0.1.0",
       "source": "./plugins/pm-strategy",
       "description": "Strategic intelligence skills for competitive analysis, market monitoring, and industry trend tracking in AI and knowledge management"
     }
