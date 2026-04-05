@@ -1,0 +1,10 @@
+#!/bin/sh
+# Auto-update Claude plugins on the current machine after every push
+echo "[pm-toolkit] Updating Claude plugins..."
+claude plugin marketplace update mathieu-pm-toolkit --quiet 2>/dev/null
+claude plugin update pm-discovery@mathieu-pm-toolkit 2>/dev/null
+claude plugin update pm-delivery@mathieu-pm-toolkit 2>/dev/null
+claude plugin update pm-brand@mathieu-pm-toolkit 2>/dev/null
+claude plugin update pm-strategy@mathieu-pm-toolkit 2>/dev/null
+claude plugin update pm-toolkit-meta@mathieu-pm-toolkit 2>/dev/null
+echo "[pm-toolkit] Done. Run /reload-plugins to apply in the current session."
