@@ -1,3 +1,11 @@
+---
+name: discovery-claim-value-prop
+description: >
+  Define the value proposition with a Press Release and Launch Tweet for the Claim phase.
+  Use when the user wants to write the claim, says "rédige le Claim", "écris le press release",
+  "génère le launch tweet", or "définis notre value prop".
+---
+
 # Skill: discovery-claim-value-prop
 
 ## Trigger

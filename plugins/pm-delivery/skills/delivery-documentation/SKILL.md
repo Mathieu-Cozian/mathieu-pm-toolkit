@@ -1,3 +1,11 @@
+---
+name: delivery-documentation
+description: >
+  Create professional French documentation articles for Mayday's help center.
+  Use when the user wants to write help documentation, says "rédige un article de doc",
+  "crée la documentation", "écris l'article d'aide", or "génère la doc utilisateur".
+---
+
 # Mayday Documentation Generator
 
 ## Overview

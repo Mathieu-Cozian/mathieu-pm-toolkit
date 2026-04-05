@@ -1,3 +1,11 @@
+---
+name: brand-voice-check
+description: >
+  Audit content against Mayday brand voice guidelines. Detects violations, forbidden words,
+  unauthorized anglicisms, and tone gaps. Use when the user wants to check brand compliance,
+  says "vérifie le brand voice", "audite ce contenu", or "est-ce que c'est dans notre tone of voice".
+---
+
 # Brand Voice Check
 
 ## Overview

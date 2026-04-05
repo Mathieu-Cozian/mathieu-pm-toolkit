@@ -1,3 +1,11 @@
+---
+name: discovery-competitive-benchmark
+description: >
+  Run a competitive benchmark and extract Gold Nuggets for the Steal phase of discovery.
+  Use when the user wants to analyze competitors, says "fais un benchmark concurrentiel",
+  "analyse les solutions existantes", "steal phase", or "trouve des gold nuggets".
+---
+
 # Skill: discovery-competitive-benchmark
 
 ## Trigger

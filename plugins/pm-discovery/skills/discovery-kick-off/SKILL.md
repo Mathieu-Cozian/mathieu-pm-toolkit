@@ -1,3 +1,11 @@
+---
+name: discovery-kick-off
+description: >
+  Start a new product discovery project with a Kick Off doc and Project Ambition sheet.
+  Use when the user wants to launch a discovery, frame a new product initiative, or says
+  "lance le kick off", "démarre une discovery", "prépare le doc de kick off".
+---
+
 # Skill: discovery-kick-off
 
 ## Trigger

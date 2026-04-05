@@ -1,3 +1,11 @@
+---
+name: discovery-user-journey
+description: >
+  Map current and future user journeys with key touchpoints for the Unfold phase of discovery.
+  Use when the user wants to map the user flow, says "mappe le parcours utilisateur",
+  "fais le user journey", "identifie les touchpoints", or "Unfold phase".
+---
+
 # Skill: discovery-user-journey
 
 ## Trigger

@@ -1,3 +1,11 @@
+---
+name: brand-voice-rewrite
+description: >
+  Rewrite content to align with Mayday brand voice guidelines, showing before/after comparison.
+  Use when the user wants to rewrite content in Mayday's voice, says "réécris en brand voice",
+  "mets ce contenu dans notre ton", or "adapte ce texte à notre style".
+---
+
 # Brand Voice Rewrite
 
 ## Overview

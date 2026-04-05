@@ -1,0 +1,9 @@
+#!/bin/sh
+# Auto-sync Claude plugins after git pull / merge
+echo "Syncing Claude plugins from mathieu-pm-toolkit..."
+claude plugin update pm-discovery@mathieu-pm-toolkit --yes 2>/dev/null
+claude plugin update pm-delivery@mathieu-pm-toolkit --yes 2>/dev/null
+claude plugin update pm-brand@mathieu-pm-toolkit --yes 2>/dev/null
+claude plugin update pm-strategy@mathieu-pm-toolkit --yes 2>/dev/null
+claude plugin update pm-toolkit-meta@mathieu-pm-toolkit --yes 2>/dev/null
+echo "Done."

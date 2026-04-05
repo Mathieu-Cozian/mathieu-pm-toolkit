@@ -1,3 +1,11 @@
+---
+name: toolkit-meta
+description: >
+  Manage the Mathieu PM Toolkit — list, create, update, or delete skills directly from a conversation.
+  Use when the user wants to modify the toolkit, says "gère le toolkit", "ajoute un skill",
+  "modifie ce skill", "liste les skills", or "manage the PM toolkit".
+---
+
 # toolkit-meta
 
 ## Description

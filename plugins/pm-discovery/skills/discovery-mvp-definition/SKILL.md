@@ -1,3 +1,11 @@
+---
+name: discovery-mvp-definition
+description: >
+  Define MVP scope with OST framework and RICE prioritization for the Execute phase.
+  Use when the user wants to define or prioritize solutions, says "définis le MVP",
+  "priorise les solutions", "fais l'OST", "RICE framework", or "Execute phase".
+---
+
 # Skill: discovery-mvp-definition
 
 ## Trigger

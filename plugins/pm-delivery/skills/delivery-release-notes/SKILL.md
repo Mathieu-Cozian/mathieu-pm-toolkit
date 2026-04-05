@@ -1,3 +1,11 @@
+---
+name: delivery-release-notes
+description: >
+  Generate Mayday-format release notes in French for the documentation portal.
+  Use when the user wants to write release notes, says "génère les release notes",
+  "rédige les notes de version", "écris le changelog", or "prépare les release notes".
+---
+
 # Mayday Release Notes Generator
 
 ## Overview

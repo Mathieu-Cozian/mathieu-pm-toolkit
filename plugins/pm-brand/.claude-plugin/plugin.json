@@ -1,7 +1,7 @@
 {
   "name": "pm-brand",
-  "version": "0.1.0",
-  "description": "Brand voice skills — audit and rewrite content to match Mayday brand guidelines",
+  "version": "0.1.1",
+  "description": "Brand voice skills \u2014 audit and rewrite content to match Mayday brand guidelines",
   "author": {
     "name": "Mathieu Cozian",
     "url": "https://github.com/Mathieu-Cozian"

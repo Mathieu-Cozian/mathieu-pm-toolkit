@@ -1,3 +1,11 @@
+---
+name: discovery-first-use-case
+description: >
+  Synthesize user interviews into a First Use Case (FUC) document for the Observe phase.
+  Use when the user wants to analyze interview findings, says "synthétise les interviews",
+  "crée le First Use Case", or "observe phase synthesis".
+---
+
 # Skill: discovery-first-use-case
 TEST
 TEST2
