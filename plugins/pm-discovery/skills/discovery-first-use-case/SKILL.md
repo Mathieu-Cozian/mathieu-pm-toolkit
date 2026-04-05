@@ -4,6 +4,7 @@ TEST2
 TEST3
 TEST4
 TEST5
+TEST6
 ## Trigger
 Use this skill when the user wants to synthesize interview learnings into a First Use Case (FUC) — e.g. "synthétise mes interviews en FUC", "rédige le premier use case", "j'ai fini mes interviews, aide-moi à synthétiser", "write the first use case from my interviews".
 
