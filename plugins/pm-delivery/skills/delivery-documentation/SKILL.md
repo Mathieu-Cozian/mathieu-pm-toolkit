@@ -347,6 +347,18 @@ Pour vous inspirer du style Mayday, consultez les exemples de référence :
 
 Ces exemples montrent le ton, la structure, et le formatage attendus.
 
+## Brand Voice
+
+Les articles de documentation sont un contenu **public** (documentation.mayday.fr). Respecter impérativement les guidelines de la marque Mayday.
+
+Lire : `shared/brand-voice/mayday-brand-voice-guidelines.md` (depuis la racine du repo)
+
+Règles critiques pour ce contexte (ton : "clair, orienté bénéfice") :
+- Pas d'hyperbole — jamais "incroyable", "révolutionnaire", "enchanter"
+- Direct et simple — pas de formules ampoulées ("nous avons le plaisir de…")
+- "Conseiller" (pas "agent"), "fonctionnalité" (pas "feature"), "mettre en place" (pas "implémenter")
+- Majuscules FR strictes
+
 ## Checklist finale
 
 Avant de présenter chaque article à l'utilisateur, vérifiez :
@@ -361,6 +373,7 @@ Avant de présenter chaque article à l'utilisateur, vérifiez :
 ✅ **Exemples** : Concrets et réalistes
 ✅ **Callouts** : Utilisés pour les points importants
 ✅ **Langue** : 100% français
+✅ **Brand voice** : Conforme aux guidelines Mayday (voir `shared/brand-voice/mayday-brand-voice-guidelines.md`)
 
 ## Template de démarrage
 

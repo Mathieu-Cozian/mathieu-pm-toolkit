@@ -209,6 +209,14 @@ Before delivering the spec, verify:
 - ✅ The spec is in French if the input was in French
 - ✅ Section titles don't include formatting indicators (H2, H3)
 
+## Brand Voice (specs internes)
+
+Les specs sont des documents internes, le ton est donc plus flexible. Cependant, appliquer les règles de base :
+- Terminologie officielle : "conseiller" (pas "agent"), "fonctionnalité" (pas "feature"), "mettre en place" (pas "implémenter")
+- Pas de jargon informel ni d'hyperbole
+
+Pour une conformité complète : `shared/brand-voice/mayday-brand-voice-guidelines.md` (depuis la racine du repo)
+
 ## Example Usage
 
 **User input:**

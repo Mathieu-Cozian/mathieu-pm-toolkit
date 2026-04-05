@@ -28,6 +28,12 @@
       "version": "0.1.0",
       "source": "./plugins/pm-strategy",
       "description": "Strategic intelligence skills for competitive analysis, market monitoring, and industry trend tracking in AI and knowledge management"
+    },
+    {
+      "name": "pm-brand",
+      "version": "0.1.0",
+      "source": "./plugins/pm-brand",
+      "description": "Brand voice skills — audit and rewrite content to match Mayday brand guidelines"
     }
   ]
 }

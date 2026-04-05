@@ -61,6 +61,19 @@ Sections with no content for a given release should be **omitted entirely** (do 
 - **Documentation links**: Each major feature should link to its dedicated doc article.
 - **"Au programme" list**: Always present in the Introduction. Each item has an emoji + **bold key term** + short phrase.
 
+## Brand Voice
+
+Les release notes sont un contenu **public et customer-facing**. Respecter impérativement les guidelines de la marque Mayday.
+
+Lire : `shared/brand-voice/mayday-brand-voice-guidelines.md` (depuis la racine du repo)
+
+Règles critiques pour ce contexte :
+- Ton "chaleureux, pas informel" — jamais de "super", "cool", "votre team va adorer"
+- Pas d'hyperbole — jamais "incroyable", "révolutionnaire", "enchanter"
+- Mots préférés : "conseiller" (pas "agent"), "fonctionnalité" (pas "feature")
+- Anglicismes : minimiser, sauf exceptions autorisées (knowledge management, pure player…)
+- Majuscules FR : pas de majuscule après deux-points, pas de majuscule pour les mois
+
 ## Detailed Template & Examples
 
 For the complete template with inline examples and all formatting conventions, read:
