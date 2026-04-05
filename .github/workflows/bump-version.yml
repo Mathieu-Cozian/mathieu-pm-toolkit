@@ -1,0 +1,71 @@
+name: Bump plugin patch version
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "plugins/**"
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed plugins and bump patch version
+        run: |
+          # Get the list of files changed in this push
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
+
+          BUMPED=()
+
+          for file in $CHANGED_FILES; do
+            # Extract the plugin folder name (e.g. plugins/pm-discovery/...)
+            plugin=$(echo "$file" | grep -oP '^plugins/[^/]+' | head -1)
+            [ -z "$plugin" ] && continue
+
+            PLUGIN_JSON="$plugin/.claude-plugin/plugin.json"
+            [ ! -f "$PLUGIN_JSON" ] && continue
+
+            # Skip if we already bumped this plugin in this run
+            [[ " ${BUMPED[*]} " == *" $plugin "* ]] && continue
+
+            # Skip if the changed file is the plugin.json itself (avoid infinite loop)
+            if [ "$file" = "$PLUGIN_JSON" ]; then
+              BUMPED+=("$plugin")
+              continue
+            fi
+
+            # Read current version
+            current=$(jq -r '.version' "$PLUGIN_JSON")
+            major=$(echo "$current" | cut -d. -f1)
+            minor=$(echo "$current" | cut -d. -f2)
+            patch=$(echo "$current" | cut -d. -f3)
+
+            # Bump patch
+            new_patch=$((patch + 1))
+            new_version="$major.$minor.$new_patch"
+
+            # Write new version
+            jq --arg v "$new_version" '.version = $v' "$PLUGIN_JSON" > tmp.json && mv tmp.json "$PLUGIN_JSON"
+
+            echo "Bumped $plugin: $current → $new_version"
+            BUMPED+=("$plugin")
+          done
+
+          # Commit if anything changed
+          if [ ${#BUMPED[@]} -gt 0 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            for p in "${BUMPED[@]}"; do
+              git add "$p/.claude-plugin/plugin.json"
+            done
+            git commit -m "chore: bump patch version for ${BUMPED[*]}" || echo "Nothing to commit"
+            git push
+          fi
