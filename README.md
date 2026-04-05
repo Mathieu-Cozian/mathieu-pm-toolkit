@@ -42,3 +42,13 @@ Maintenance skill for managing the toolkit itself.
 /plugin install pm-delivery@mathieu-pm-toolkit
 /plugin install pm-toolkit-meta@mathieu-pm-toolkit
 ```
+
+## Auto-sync setup (one-time, per machine)
+
+After cloning this repo, run this command once to activate the git hooks:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+This enables a `pre-push` hook that automatically runs `claude plugin marketplace update` 10 seconds after every push, keeping your local Claude Code installation in sync with the latest version on GitHub — no manual updates needed.
