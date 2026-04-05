@@ -1,6 +1,6 @@
 {
   "name": "pm-toolkit-meta",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Maintenance skill for managing skills in the Mathieu PM Toolkit",
   "author": {
     "name": "Mathieu Cozian",

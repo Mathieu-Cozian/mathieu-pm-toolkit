@@ -19,7 +19,7 @@
     },
     {
       "name": "pm-toolkit-meta",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./plugins/pm-toolkit-meta",
       "description": "Maintenance skill for managing the PM Toolkit plugin itself"
     },
