@@ -7,19 +7,19 @@
   "plugins": [
     {
       "name": "pm-discovery",
-      "version": "0.1.8",
+      "version": "0.1.9",
       "source": "./plugins/pm-discovery",
       "description": "Product discovery skills following the FOCUSED framework (Frame, Observe, Claim, Unfold, Steal, Execute, Decide)"
     },
     {
       "name": "pm-delivery",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./plugins/pm-delivery",
       "description": "Product delivery skills for specs, documentation, and release notes"
     },
     {
       "name": "pm-toolkit-meta",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "source": "./plugins/pm-toolkit-meta",
       "description": "Maintenance skill for managing the PM Toolkit plugin itself"
     },
