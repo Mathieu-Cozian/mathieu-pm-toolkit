@@ -38,13 +38,14 @@ Avant toute action, détermine ce que Mathieu veut faire :
 → Lire le SKILL.md concerné
 → Appliquer les modifications
 → Committer + pusher
+→ Mettre à jour automatiquement l'entrée Notion correspondante (Description + Comment le déclencher)
 → Rappeler de refresh le plugin dans Cowork
 
 **B) Créer un nouveau skill**
 → Demander : nom du skill, phase/contexte, livrable attendu, déclencheurs naturels
 → Créer `skills/<nouveau-skill>/SKILL.md` en suivant la structure standard (voir ci-dessous)
 → Committer + pusher
-→ Proposer d'ajouter une entrée dans le registre Notion `claude_skills`
+→ Créer automatiquement une entrée dans le registre Notion `claude_skills`
 
 **C) Supprimer un skill**
 → Confirmer avec Mathieu avant de supprimer
@@ -106,15 +107,30 @@ Toujours rappeler à Mathieu :
 
 > "C'est pushé sur GitHub ✅ Pour que les changements soient actifs dans Cowork, va dans **Customize → ton plugin → Refresh** (ou désinstalle/réinstalle le plugin)."
 
-### 5. Registre Notion
+### 5. Registre Notion — Sync automatique
 
-Si un nouveau skill est créé, proposer d'ajouter une entrée dans la base Notion `claude_skills`. Les champs à remplir :
-- **Nom** : nom du skill
-- **Description** : 1 phrase
-- **Phase** : Frame / Observe / Claim / Unfold / Steal / Execute / Decide / Meta / Delivery / Strategy
-- **Trigger principal** : la phrase déclenchante principale
-- **Livrable** : le document/output produit
-- **Statut** : Actif
+**DB Notion :** https://www.notion.so/getmayday/Claude-Skills-338d85247988809b8104c3c9bd67316c
+**Data source ID :** `collection://338d8524-7988-8092-9594-000b4ad39746`
+
+#### Lors de la création d'un nouveau skill → créer une entrée
+
+Utilise le Notion MCP pour créer une page dans la DB `claude_skills` avec ces champs :
+
+| Champ Notion | Valeur à remplir |
+|---|---|
+| `Name` | Nom du skill (ex: `discovery-kick-off`) |
+| `Catégorie` | `Discovery` / `Delivery` / `Strategy` / `Communication` / `Documentation` / `Analyse` |
+| `Description` | 1-2 phrases décrivant le skill |
+| `Comment le déclencher` | Les phrases naturelles qui déclenchent le skill |
+| `Dépendances` | JSON array ex: `["Notion"]` ou `["Aucune"]` selon les MCPs utilisés |
+| `GitHub URL` | `https://github.com/Mathieu-Cozian/mathieu-pm-toolkit/blob/main/plugins/<plugin>/skills/<skill>/SKILL.md` |
+| `Statut` | `Active` |
+
+#### Lors de la modification d'un skill → mettre à jour l'entrée existante
+
+1. Chercher l'entrée dans la DB par son nom (ex: `discovery-first-use-case`)
+2. Mettre à jour les champs qui ont changé : `Description`, `Comment le déclencher`
+3. Le champ `Last Updated` est automatique
 
 ### 6. Bonnes pratiques pour les skills
 
