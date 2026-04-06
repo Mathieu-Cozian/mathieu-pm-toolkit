@@ -13,7 +13,7 @@
     },
     {
       "name": "pm-delivery",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "source": "./plugins/pm-delivery",
       "description": "Product delivery skills for specs, documentation, and release notes"
     },
