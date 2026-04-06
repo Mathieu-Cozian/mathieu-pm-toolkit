@@ -69,6 +69,18 @@ description: >
 [Instructions pour Claude — workflow, règles, format de sortie]
 ```
 
+## Versioning
+
+Versions follow `major.minor.patch` and are bumped **manually** — no automation.
+
+| Change | Bump | Example |
+|---|---|---|
+| Fix or trim an existing skill | patch | `0.2.0 → 0.2.1` |
+| New skill added to a plugin | minor | `0.2.0 → 0.3.0` |
+| Plugin fully restructured or renamed | major | `0.2.0 → 1.0.0` |
+
+Always bump the plugin version in `plugins/<plugin>/.claude-plugin/plugin.json` when pushing a meaningful change. Also update `CHANGELOG.md` at repo root for minor and major bumps.
+
 ## Commandes Git
 
 ```bash

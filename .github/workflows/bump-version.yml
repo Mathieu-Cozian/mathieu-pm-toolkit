@@ -1,11 +1,7 @@
 name: Bump plugin patch version
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "plugins/**"
+  workflow_dispatch: # disabled — versions are managed manually via toolkit-meta
 
 jobs:
   bump:
