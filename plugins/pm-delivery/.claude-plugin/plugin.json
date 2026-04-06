@@ -1,6 +1,6 @@
 {
   "name": "pm-delivery",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Product delivery skills for writing specs, documentation, and release notes",
   "author": {
     "name": "Mathieu Cozian",
