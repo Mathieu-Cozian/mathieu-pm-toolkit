@@ -208,52 +208,7 @@ Pas de politique de traduction systématique — traiter au cas par cas selon l'
 
 ---
 
-## 9. Identité visuelle (référence)
-
-> Source de vérité : **Design System Bêta** (Figma : `fsZBWkunTT7VGnhxOGdPfE`)
-
-### Typographies
-
-
-| Usage                    | Police       | Notes                                               |
-| ------------------------ | ------------ | --------------------------------------------------- |
-| **Marketing / site web** | Commissioner | Bold et Regular principalement                      |
-| **Produit (UI)**         | Lato         | Bold et Regular ; hiérarchie T1→T6 + Body + Caption |
-
-
-### Couleurs — tokens principaux
-
-
-| Token      | Rôle                  | Hex approx. |
-| ---------- | --------------------- | ----------- |
-| Blue/500   | Couleur primaire, CTA | `#0081F9`   |
-| Blue/700   | Hover                 | `#005DB4`   |
-| Blue/900   | Pressed / dark        | `#003A6F`   |
-| Blue/50    | Background tint       | `#EAF5FF`   |
-| Grey/900   | Texte body            | `#262A30`   |
-| Grey/100   | Background            | `#F2F5F9`   |
-| Green/500  | Succès                | `#4FA378`   |
-| Yellow/500 | Warning / Academy     | `#FFD04D`   |
-| Red/500    | Erreur / Danger       | `#E40C26`   |
-| White      | Fond                  | `#FFFFFF`   |
-
-
-**Couleur IA** : gradient linéaire (style "AI" dans le design system) — signature visuelle de toutes les features Mayday AI.
-
-**Purple** : présent dans les tokens (Purple/500 ≈ `#5A2BE1`) mais en cours de dépréciation pour les features IA — ne pas utiliser pour les nouveaux contenus AI.
-
-### Logo
-
-3 triangles encodant 3 significations : sablier (gestion du temps) · enveloppe + fusée (boost service client) · éclair (productivité).
-Deux variantes : Default et Rounded. Deux modes : Light et Dark.
-
-### Border radius
-
-S=2px · M=4px · L=8px · XL=12px · Rounded=9999px
-
----
-
-## 10. Exemples — ce qui fonctionne
+## 9. Exemples — ce qui fonctionne
 
 > Ces extraits sont issus du site live (avril 2026) et des docs internes.
 

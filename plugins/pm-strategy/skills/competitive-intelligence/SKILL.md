@@ -137,4 +137,4 @@ Based on this week's intelligence:
 
 ## Saving the Output
 
-Save the completed report as a markdown file named `competitive-intel-[YYYY-MM-DD].md` in the outputs folder and provide the user with a direct link.
+Save the completed report as a markdown file named `competitive-intel-[YYYY-MM-DD].md` in the current project folder and provide the user with a direct link. Then ask if they want to push it to Notion — if yes, ask which page to create it under before acting.

@@ -10,141 +10,87 @@ description: >
 
 ## Description
 
-Skill de maintenance du plugin Mathieu PM Toolkit. Permet à Mathieu de modifier des skills existants, d'en créer de nouveaux, de les supprimer, ou d'obtenir un état des lieux complet du plugin — directement depuis une conversation Cowork, sans avoir à toucher GitHub manuellement.
+Skill de maintenance du PM Toolkit. Permet de modifier des skills existants, d'en créer de nouveaux, de les supprimer, ou d'obtenir un état des lieux complet — directement depuis une conversation, sans toucher GitHub manuellement.
 
-## Triggers
+## Repo
 
-Ce skill se déclenche quand Mathieu dit :
-- "Mets à jour le skill [nom]"
-- "Modifie le skill [nom]"
-- "Améliore le skill [nom]"
-- "Ajoute un nouveau skill"
-- "Crée un skill pour [X]"
-- "Supprime le skill [nom]"
-- "Liste mes skills"
-- "Montre-moi mes skills"
-- "C'est quoi mes skills ?"
-- "Qu'est-ce que le toolkit contient ?"
-- "Met à jour mon plugin"
-- "Gère mon toolkit"
+- **Local :** `/Users/mathieucozian/claude/mathieu-pm-toolkit/`
+- **GitHub :** `https://github.com/Mathieu-Cozian/mathieu-pm-toolkit`
 
-## Contexte du plugin
+## Structure
 
-- **Repo GitHub :** `https://github.com/Mathieu-Cozian/mathieu-pm-toolkit`
-- **Repo local (session) :** `/sessions/optimistic-happy-meitner/mayday-skills/`
-- **Structure des skills :** `skills/<nom-du-skill>/SKILL.md`
-- **Credentials Git :** `~/.git-credentials` (PAT GitHub)
-
-## Instructions
-
-### 1. Identifier l'intention
-
-Avant toute action, détermine ce que Mathieu veut faire :
-
-**A) Modifier un skill existant**
-→ Demander : quel skill ? quels changements ?
-→ Lire le SKILL.md concerné
-→ Appliquer les modifications
-→ Committer + pusher
-→ Mettre à jour automatiquement l'entrée Notion correspondante (Description + Comment le déclencher)
-→ Rappeler de refresh le plugin dans Cowork
-
-**B) Créer un nouveau skill**
-→ Demander : nom du skill, phase/contexte, livrable attendu, déclencheurs naturels
-→ Créer `skills/<nouveau-skill>/SKILL.md` en suivant la structure standard (voir ci-dessous)
-→ Committer + pusher
-→ Créer automatiquement une entrée dans le registre Notion `claude_skills`
-
-**C) Supprimer un skill**
-→ Confirmer avec Mathieu avant de supprimer
-→ Supprimer le dossier `skills/<nom-du-skill>/`
-→ Committer + pusher
-
-**D) Lister les skills**
-→ Faire un `ls skills/` pour lister les dossiers
-→ Lire chaque SKILL.md pour extraire : nom, phase, trigger principal, livrable
-→ Afficher un tableau récapitulatif propre
-
-### 2. Structure standard d'un SKILL.md
-
-Quand tu crées un nouveau skill, utilise cette structure :
-
-```markdown
-# <nom-du-skill>
-
-## Description
-[1-2 phrases : à quoi sert ce skill, dans quel contexte]
-
-## Triggers
-[Liste des phrases naturelles qui déclenchent ce skill]
-
-## Contexte requis
-[Ce que Mathieu doit fournir pour que le skill fonctionne bien]
-
-## Livrable
-[Ce que produit le skill : document, tableau, liste, etc.]
-
-## Instructions
-[Instructions détaillées pour Claude — étape par étape]
-
-## Format de sortie
-[Structure précise du livrable produit]
+```
+plugins/
+  <plugin-name>/
+    .claude-plugin/plugin.json   ← plugin metadata (name, version, description)
+    skills/
+      <skill-name>/
+        SKILL.md                 ← skill instructions
+        references/              ← optional reference files
 ```
 
-### 3. Commandes Git à utiliser
+Plugins actuels : `pm-brand`, `pm-delivery`, `pm-discovery`, `pm-strategy`, `pm-toolkit-meta`
 
-**Pour committer et pusher :**
+## Instructions
+
+### A) Modifier un skill existant
+1. Lire le SKILL.md concerné
+2. Appliquer les modifications
+3. Committer + pusher (voir commandes Git ci-dessous)
+
+### B) Créer un nouveau skill
+1. Demander : dans quel plugin ? quel nom de skill ? quel livrable ? quels déclencheurs naturels ?
+2. Créer `plugins/<plugin>/skills/<skill-name>/SKILL.md` en suivant la structure standard
+3. Committer + pusher
+
+### C) Supprimer un skill
+1. Confirmer avec l'utilisateur
+2. Supprimer le dossier `plugins/<plugin>/skills/<skill-name>/`
+3. Committer + pusher
+
+### D) Lister les skills
+Lire chaque SKILL.md et afficher un tableau : nom, plugin, trigger principal, livrable.
+
+### E) Bumper la version d'un plugin
+Modifier le champ `version` dans `plugins/<plugin>/.claude-plugin/plugin.json`. Conventions : patch (fix/trim), minor (nouveau skill), major (refonte).
+
+## Structure standard d'un SKILL.md
+
+```markdown
+---
+name: <skill-name>
+description: >
+  [Ce que fait le skill en 1-2 phrases.]
+  [Triggers : "Use when the user says X, Y, Z."]
+---
+
+# <Titre>
+
+[Instructions pour Claude — workflow, règles, format de sortie]
+```
+
+## Commandes Git
+
 ```bash
-cd /sessions/optimistic-happy-meitner/mayday-skills
-git add <fichiers modifiés>
-git commit -m "<type>: <description courte>"
+cd /Users/mathieucozian/claude/mathieu-pm-toolkit
+git add plugins/<plugin>/skills/<skill>/SKILL.md
+git commit -m "<feat|update|fix|remove>: <description courte>"
 git push origin main
 ```
 
-Types de commit : `update` (modification), `feat` (nouveau skill), `remove` (suppression), `fix` (correction)
+## Notion — Registre des skills
 
-**Si le repo local n'est pas à jour :**
-```bash
-cd /sessions/optimistic-happy-meitner/mayday-skills
-git pull origin main
-```
+Si l'utilisateur veut synchroniser un nouveau skill dans Notion :
+- **Demander** dans quelle page/DB Notion créer l'entrée avant d'agir
+- Champs à remplir : Nom, Plugin, Description, Triggers, GitHub URL, Statut (`Active`)
+- GitHub URL format : `https://github.com/Mathieu-Cozian/mathieu-pm-toolkit/blob/main/plugins/<plugin>/skills/<skill>/SKILL.md`
 
-### 4. Après chaque modification
+Ne jamais créer de page Notion sans avoir confirmé la destination avec l'utilisateur.
 
-Toujours rappeler à Mathieu :
+## Bonnes pratiques pour les skills
 
-> "C'est pushé sur GitHub ✅ Pour que les changements soient actifs dans Cowork, va dans **Customize → ton plugin → Refresh** (ou désinstalle/réinstalle le plugin)."
-
-### 5. Registre Notion — Sync automatique
-
-**DB Notion :** https://www.notion.so/getmayday/Claude-Skills-338d85247988809b8104c3c9bd67316c
-**Data source ID :** `collection://338d8524-7988-8092-9594-000b4ad39746`
-
-#### Lors de la création d'un nouveau skill → créer une entrée
-
-Utilise le Notion MCP pour créer une page dans la DB `claude_skills` avec ces champs :
-
-| Champ Notion | Valeur à remplir |
-|---|---|
-| `Name` | Nom du skill (ex: `discovery-kick-off`) |
-| `Catégorie` | `Discovery` / `Delivery` / `Strategy` / `Communication` / `Documentation` / `Analyse` |
-| `Description` | 1-2 phrases décrivant le skill |
-| `Comment le déclencher` | Les phrases naturelles qui déclenchent le skill |
-| `Dépendances` | JSON array ex: `["Notion"]` ou `["Aucune"]` selon les MCPs utilisés |
-| `GitHub URL` | `https://github.com/Mathieu-Cozian/mathieu-pm-toolkit/blob/main/plugins/<plugin>/skills/<skill>/SKILL.md` |
-| `Statut` | `Active` |
-
-#### Lors de la modification d'un skill → mettre à jour l'entrée existante
-
-1. Chercher l'entrée dans la DB par son nom (ex: `discovery-first-use-case`)
-2. Mettre à jour les champs qui ont changé : `Description`, `Comment le déclencher`
-3. Le champ `Last Updated` est automatique
-
-### 6. Bonnes pratiques pour les skills
-
-Quand tu améliores ou crées un skill, garde en tête :
-- Les instructions doivent être **actionnables et précises** — Claude doit savoir exactement quoi produire
-- Les triggers doivent être **naturels** — ce que Mathieu dirait spontanément
-- Le livrable doit être **concret** — un document, un tableau, une liste structurée
-- Les skills Discovery suivent le **framework FOCUSED** : Frame → Observe → Claim → Unfold → Steal → Execute → Decide
-- Toujours inclure un **format de sortie** explicite pour que l'output soit cohérent
+- Instructions **actionnables et précises** — Claude doit savoir exactement quoi produire
+- Triggers **naturels** — ce que l'utilisateur dirait spontanément
+- Livrable **concret** — un document, un tableau, une liste structurée
+- Garder les skills **lean** — pas d'exemples verbeux si des fichiers de référence existent
+- Référencer `shared/product-context/` et `shared/brand-voice/` plutôt que dupliquer le contexte
