@@ -136,16 +136,20 @@ Propose 3-7 high-signal events as a table. Avoid tracking UI noise (button click
 
 #### Gherkin Scenarios:
 
-Provide all test cases in a single Notion-compatible code block using Gherkin syntax:
+Provide all test cases in a single Notion-compatible code block using Gherkin syntax. **Separate scenarios by scope using `#` comments** (e.g., `# Admin`, `# Agent`, `# Permissions`):
 
 ```gherkin
 Feature: [Feature Name]
+
+# [Scope 1 — e.g. Admin]
 
 Scenario: [Scenario Name]
   Given [initial context]
   When [action taken]
   Then [expected outcome]
   And [additional outcome]
+
+# [Scope 2 — e.g. Agent]
 
 Scenario: [Another Scenario]
   Given [context]
@@ -225,7 +229,7 @@ Before delivering the spec, verify:
 - ✅ Horizontal dividers (`---`) appear after every section title
 - ✅ Terminology is used correctly (Agent vs AI Agent)
 - ✅ User stories follow the "As a...I want...so that" format
-- ✅ Gherkin scenarios are in a proper code block
+- ✅ Gherkin scenarios are in a proper code block, with `#` comment separators per scope
 - ✅ Analytics events are in code format with properties listed
 - ✅ The spec is in French if the input was in French
 - ✅ Section titles don't include formatting indicators (H2, H3)

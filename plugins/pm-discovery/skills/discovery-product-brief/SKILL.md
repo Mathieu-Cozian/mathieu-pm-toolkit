@@ -68,20 +68,35 @@ Produce the full PRD following Mayday's exact template structure:
 ### ⭐ North Star Metric
 [Single primary metric. Define what "active" means in this context, what the metric actually measures, and the target with timeframe]
 
-### 👀 Key Performance Indicators
-[3–5 measurable indicators. For each: short title + formula/definition + what it measures and why it matters + whether it's in Amplitude or database only]
+### 📈 KPIs — Framework AARRR
 
-**1. [KPI Name]**
-[Formula or definition] — *[What it measures]*
+**Activation** — [ex: % d'utilisateurs cibles ayant réalisé l'action clé au moins une fois]
+[Formule ou définition] — *[Ce que ça mesure]*
 
-**2. [KPI Name]**
-[Formula or definition] — *[What it measures]*
+**Adoption** — [ex: % d'utilisateurs cibles actifs sur une base weekly ou monthly — préciser la fenêtre]
+[Formule ou définition] — *[Ce que ça mesure]*
 
-**3. [KPI Name]**
-[Formula or definition] — *[What it measures]*
+**Rétention** — [ex: % d'utilisateurs actifs en mois n-1 encore actifs en mois n]
+[Formule ou définition] — *[Ce que ça mesure — returning users]*
 
-### 🔼 Supporting Metrics
-[Secondary metrics to monitor but not optimize directly]
+**Referral** — [N/A si feature interne, sinon définir]
+
+**Revenue** — [ex: croissance du % de clients souscrits au module concerné / part dans l'ARR]
+[Formule ou définition] — *[Ce que ça mesure]*
+
+### 🔼 Supporting Metrics — Engagement & SAT
+[Métriques secondaires pour monitorer la profondeur d'usage et la satisfaction]
+
+- **Engagement :** [ex: nb d'actions clés par utilisateur actif par mois — tracker le progrès over time]
+- **SAT :** [ex: dans 6 mois, mesure de la perception client sur le bénéfice de la feature — comparer utilisateurs vs. non-utilisateurs pour identifier une corrélation positive]
+
+### 🎯 Justification des cibles
+Pour chaque KPI avec une cible chiffrée, documenter :
+- **Baseline actuelle** : quelle est la valeur aujourd'hui ? (source : Amplitude / base de données)
+- **Benchmark** : y a-t-il une feature similaire qui sert de référence ?
+- **Raisonnement** : pourquoi cette cible est-elle réaliste et ambitieuse ?
+
+> ⚠️ Une target sans baseline est un signal d'alerte — elle sera challengée en revue.
 
 ---
 
@@ -128,14 +143,35 @@ Produce the full PRD following Mayday's exact template structure:
 → *[Alignment status + date]*
 
 ### ⛔ Limits
-[Technical or product limits defined for this feature]
-→ **Todo:**
+Pour chaque limite identifiée, ne pas juste la nommer — poser une première hypothèse chiffrée (même approximative) pour alimenter la discussion avec l'Engineering.
+
+Dimensions à couvrir selon la nature de la feature :
+- **Usage** : quota par compte, par utilisateur, par période
+- **Volume / taille** : nb max d'éléments, taille max d'un contexte ou d'un fichier
+- **Coût à l'échelle** : coût unitaire estimé × usage projeté
+- **Performance** : temps de réponse max acceptable
+- **Légal / contractuel** : rétention des données, RGPD, contraintes tiers
+
+→ Si une limite n'est pas encore chiffrée, la marquer **Todo** avec une question précise à trancher avec l'Engineering ou le CPO.
 - [ ] [Point to decide]
 
 ---
 
 ## ⛔️ Out of Scope (v0)
 [Explicit list of everything excluded from v0 scope, with brief rationale for each]
+
+---
+
+## ⚠️ Risks & Mitigations
+
+Pour chaque feature avec un impact significatif, documenter 3 à 5 risques. Un risque sans mitigation n'est pas acceptable — même une mitigation partielle vaut mieux que rien.
+
+| # | Risque | Probabilité | Impact | Mitigation |
+|---|--------|-------------|--------|------------|
+| 1 | [Ex : recommandations incorrectes appliquées en lot par les utilisateurs] | Moyenne | Élevé | [Ex : confirmation explicite requise, historique des actions, rollback possible] |
+| 2 | [Ex : qualité insuffisante au lancement → perception négative clients] | Moyenne | Élevé | [Ex : beta restreinte, critères de qualité minimum avant ouverture, feedback loop court] |
+| 3 | [Ex : sans accompagnement CSM/Product/Client, adoption décevante] | Élevée | Moyen | [Ex : plan d'activation co-construit avec CS, playbook de lancement] |
+| 4 | [À compléter selon la feature] | ... | ... | ... |
 
 ---
 
