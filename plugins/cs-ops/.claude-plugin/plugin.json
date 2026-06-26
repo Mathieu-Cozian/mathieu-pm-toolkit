@@ -1,0 +1,9 @@
+{
+  "name": "cs-ops",
+  "version": "0.1.0",
+  "description": "Outils d'opérations Customer Success : qualification de bugs, et autres workflows CS à venir.",
+  "author": {
+    "name": "Mathieu Cozian",
+    "url": "https://github.com/Mathieu-Cozian"
+  }
+}

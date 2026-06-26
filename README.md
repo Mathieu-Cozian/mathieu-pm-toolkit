@@ -27,6 +27,13 @@ Product delivery skills for specs, documentation, and release communication.
 | `/pm-delivery:documentation` | Create professional French documentation articles |
 | `/pm-delivery:release-notes` | Generate Mayday-format release notes in French |
 
+### cs-ops
+Customer Success operations — bug qualification and CS workflows.
+
+| Command | Description |
+|---------|-------------|
+| `/cs-ops:delivery-bug-qualification` | Turn a Loom transcript into a structured Notion bug card |
+
 ### pm-toolkit-meta
 Maintenance skill for managing the toolkit itself.
 
@@ -40,6 +47,7 @@ Maintenance skill for managing the toolkit itself.
 /plugin marketplace add Mathieu-Cozian/mathieu-pm-toolkit
 /plugin install pm-discovery@mathieu-pm-toolkit
 /plugin install pm-delivery@mathieu-pm-toolkit
+/plugin install cs-ops@mathieu-pm-toolkit
 /plugin install pm-toolkit-meta@mathieu-pm-toolkit
 ```
 
