@@ -70,7 +70,7 @@ Règles de rendu pour le skill :
 
 ---
 
-## 🔍 Tests réalisés par la CS
+## 🔍 Tests réalisés par le CSM
 
 - [ ] 🥵 Reproduit sur le **compte client**
 - [ ] 🥵 Reproduit sur le **compte démo CSM**
